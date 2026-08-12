@@ -22,7 +22,7 @@ public class TaskRepository {
             }
         }
 
-        return null;
+        throw new IllegalArgumentException();
     }
 
     public void delete(int id) {
