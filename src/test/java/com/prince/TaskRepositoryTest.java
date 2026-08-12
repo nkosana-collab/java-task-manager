@@ -3,6 +3,7 @@ package com.prince;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -30,7 +31,9 @@ public class TaskRepositoryTest {
         repo.delete(1);
 
         // Then:
-        assertNull(repo.findById(1));
+        assertThrows(IllegalArgumentException.class,() -> {
+            repo.findById(1);
+        });
 
         
     }
