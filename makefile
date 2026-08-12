@@ -6,15 +6,6 @@ build:
 test:
 	mvn test
 
-test-manager:
-	mvn test 
-
-test-repository:
-	mvn test
-
-test-task:
-	mvn test
-
 clean:
 	mvn clean
 
